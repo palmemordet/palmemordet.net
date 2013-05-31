@@ -1,0 +1,190 @@
+body {
+	background-color: rgb(252, 252, 252);
+	margin: 0;
+	padding: 2em;
+	font: 100%/1.4 "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+#wrapper {
+	max-width: 40em;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0;
+}
+
+h2 {
+	font-size: 1.5em;
+	margin: 0.67em 0;
+}
+
+h1, h2 {
+	line-height: 1.25;
+}
+
+blockquote {
+	background: rgb(235, 235, 235);
+	border-left: 0.5em solid rgb(200, 200, 200);
+	margin: 1em 0;
+	padding: 1em;
+}
+
+	blockquote p {
+		margin: 0;
+		text-indent: 1.4em;
+	}
+
+	p.extra-top {
+		text-indent: 0;
+		margin-top: 1em;
+	}
+
+	blockquote p.first-child {
+		text-indent: 0;
+	}
+
+	blockquote blockquote {
+		font-size: 90%;
+		background: transparent;
+		border-left: 0;
+		margin: 1.1111em 2.2222em;
+		padding: 0;
+	}
+
+	blockquote .source {
+		margin: 0;
+		font-style: italic;
+		text-align: right;
+	}
+
+a {
+	color: rgb(200, 0, 0);
+}
+
+a:active,
+a:visited {
+	color: rgb(140, 0, 0);
+}
+
+a:hover {
+	color: rgb(240, 0, 0);
+}
+
+ul {
+	margin: 0;
+	padding: 0 0 0 1.4em;
+}
+
+li {
+	margin: 1em 0 0 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 0 0 1.4em;
+}
+
+abbr {
+	border-bottom: 0.1em dotted;
+	cursor: help;
+}
+
+.icon-quote-left {
+	color: rgb(200, 200, 200);
+	margin-top: 0.1em;
+	margin-right: 0.55em !important;
+}
+
+.icon-circle-arrow-left {
+	margin-right: 0.5em;
+}
+
+.icon-external-link {
+	font-size: 90%;
+	vertical-align: -0.05em;
+}
+
+.icon-envelope-alt {
+	font-size: 90%;
+}
+
+.no-break {
+	white-space: nowrap;
+}
+
+@media screen and (max-width: 40em) {
+
+	body {
+		padding: 1em 1.5em;
+	}
+
+	blockquote {
+		margin: 1em -1.5em;
+	}
+
+		blockquote blockquote {
+			margin: 1.1111em;
+		}
+
+}
+
+@media print {
+
+	body {
+		background-color: transparent !important;
+		padding: 0;
+	}
+
+	@page {
+		margin: 1cm;
+	}
+
+	#wrapper {
+		max-width: none;
+	}
+
+	p, h1, h2 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h1, h2 {
+		page-break-after: avoid;
+	}
+
+	a, a:visited {
+		color: black;
+	}
+
+	a[href^="http"] {
+		text-decoration: none;
+	}
+
+	a[href^="http"]:after {
+		content: " (" attr(href) ")";
+	}
+
+	blockquote {
+		background-color: transparent !important;
+		padding: 0 1em;
+		border-right: 0.5em solid rgb(200, 200, 200);
+	}
+
+		blockquote blockquote {
+			border-right: 0;
+		}
+
+	abbr {
+		border-bottom: 0;
+	}
+
+	.hide-on-print {
+		display: none;
+	}
+
+}
